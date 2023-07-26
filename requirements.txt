@@ -1,0 +1,2 @@
+parsel==1.8.1
+requests==2.31.0
