@@ -55,4 +55,4 @@ if __name__ == "__main__":
     TELEGRAM_TOKEN, TELEGRAM_CHAT_ID = load_enviroment(logger)
     statusBTS = load_bts_status_from_navy()
     message = "CONDIÇÕES DE NAVEGABILIDADE NA BTS: " + statusBTS
-    send_message_to_telegram(TELEGRAM_TOKEN, TELEGRAM_CHAT_ID, message)
+    send_message_to_telegram(TELEGRAM_TOKEN, TELEGRAM_CHAT_ID, message, logger)
