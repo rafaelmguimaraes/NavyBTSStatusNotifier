@@ -4675,3 +4675,8 @@
 2023-09-09 05:09:06,830 - urllib3.connectionpool - DEBUG - https://www.marinha.mil.br:443 "GET /cpba/ HTTP/1.1" 200 None
 2023-09-09 05:09:07,678 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
 2023-09-09 05:09:22,705 - __main__ - ERROR - An error occurred: Error fetching Telegram API: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot6568144010:AAHlWZeQqYROqzZho0DbW_odqWVe5s_5JV0/sendMessage?chat_id=%7Bchat_id%7D&text=%7Bmessage%7D (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3dc3ba92e0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2023-09-09 06:12:15,671 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.marinha.mil.br:443
+2023-09-09 06:12:16,814 - urllib3.connectionpool - DEBUG - https://www.marinha.mil.br:443 "GET /cpba/ HTTP/1.1" 200 None
+2023-09-09 06:12:17,843 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
+2023-09-09 06:12:33,852 - urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "GET /bot6568144010:AAHlWZeQqYROqzZho0DbW_odqWVe5s_5JV0/sendMessage?chat_id=%7Bchat_id%7D&text=%7Bmessage%7D HTTP/1.1" 400 73
+2023-09-09 06:12:33,854 - __main__ - INFO - ALERTA AMARELO
