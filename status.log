@@ -7773,3 +7773,8 @@
 2023-10-05 01:50:41,407 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
 2023-10-05 01:50:41,798 - urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "GET /bot6568144010:AAHlWZeQqYROqzZho0DbW_odqWVe5s_5JV0/sendMessage?chat_id=%7Bchat_id%7D&text=%7Bmessage%7D HTTP/1.1" 400 73
 2023-10-05 01:50:41,800 - __main__ - INFO - ALERTA VERDE
+2023-10-05 02:20:15,682 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.marinha.mil.br:443
+2023-10-05 02:20:16,724 - urllib3.connectionpool - DEBUG - https://www.marinha.mil.br:443 "GET /cpba/ HTTP/1.1" 200 None
+2023-10-05 02:20:17,663 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
+2023-10-05 02:20:18,218 - urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "GET /bot6568144010:AAHlWZeQqYROqzZho0DbW_odqWVe5s_5JV0/sendMessage?chat_id=%7Bchat_id%7D&text=%7Bmessage%7D HTTP/1.1" 400 73
+2023-10-05 02:20:18,220 - __main__ - INFO - ALERTA VERDE
