@@ -26282,3 +26282,5 @@
 2024-03-08 09:10:50,998 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
 2024-03-08 09:10:51,346 - urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "GET /bot6568144010:AAHlWZeQqYROqzZho0DbW_odqWVe5s_5JV0/sendMessage?chat_id=%7Bchat_id%7D&text=%7Bmessage%7D HTTP/1.1" 400 73
 2024-03-08 09:10:51,347 - __main__ - INFO - ALERTA VERDE 
+2024-03-08 10:13:13,132 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.marinha.mil.br:443
+2024-03-08 10:13:23,155 - __main__ - ERROR - An error occurred: Error fetching BTS status: HTTPSConnectionPool(host='www.marinha.mil.br', port=443): Max retries exceeded with url: /cpba/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa0004254f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
