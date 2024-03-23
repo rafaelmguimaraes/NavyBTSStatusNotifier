@@ -28082,3 +28082,5 @@
 2024-03-23 12:20:30,016 - __main__ - ERROR - Timeout occurred while fetching BTS status.
 2024-03-23 13:10:04,571 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.marinha.mil.br:443
 2024-03-23 13:10:20,147 - __main__ - ERROR - Timeout occurred while fetching BTS status.
+2024-03-23 14:08:55,732 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.marinha.mil.br:443
+2024-03-23 14:09:11,610 - __main__ - ERROR - Timeout occurred while fetching BTS status.
