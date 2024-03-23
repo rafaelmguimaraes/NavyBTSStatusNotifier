@@ -28084,3 +28084,5 @@
 2024-03-23 13:10:20,147 - __main__ - ERROR - Timeout occurred while fetching BTS status.
 2024-03-23 14:08:55,732 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.marinha.mil.br:443
 2024-03-23 14:09:11,610 - __main__ - ERROR - Timeout occurred while fetching BTS status.
+2024-03-23 15:12:21,920 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.marinha.mil.br:443
+2024-03-23 15:12:37,202 - __main__ - ERROR - An error occurred: Error fetching BTS status: HTTPSConnectionPool(host='www.marinha.mil.br', port=443): Max retries exceeded with url: /cpba/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7faa0b007490>, 'Connection to www.marinha.mil.br timed out. (connect timeout=15)'))
