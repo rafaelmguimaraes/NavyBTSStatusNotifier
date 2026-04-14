@@ -83,10 +83,10 @@ NavyBTSStatusNotifier can be automatically executed at regular intervals using G
 
 ### Workflow Details
 
-The workflow is triggered by a scheduled event based on a cron expression. It runs the script hourly to ensure timely updates.
+The workflow is triggered by a scheduled event based on a cron expression. Recent bulletins have typically been published between 09:17 and 11:14 in Salvador time, so the workflow runs once per day after that window.
 
 - **Event:** Scheduled event (Cron job)
-- **Interval:** Every hour (at minute 0 past every hour)
+- **Interval:** Daily at 15:00 UTC (12:00 in Salvador, UTC-3)
 
 ### Workflow Steps
 

@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '0 */1 * * *' # At minute 0 past every hour (every hour)
+    - cron: '0 15 * * *' # Daily at 15:00 UTC, after the usual morning bulletin window in Salvador
   workflow_dispatch:
 
 concurrency:
