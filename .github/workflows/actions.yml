@@ -3,40 +3,58 @@ name: run main.py
 on:
   schedule:
     - cron: '0 */1 * * *' # At minute 0 past every hour (every hour)
+  workflow_dispatch:
+
+concurrency:
+  group: navy-bts-status-notifier
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
     steps:
 
       - name: checkout repo content
-        uses: actions/checkout@v3 # checkout the repository content to github runner
+        uses: actions/checkout@v4
 
       - name: setup python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.9' # install the python version needed
+          python-version: '3.11'
           
       - name: install python packages
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: restore saved state
+        uses: actions/cache/restore@v4
+        with:
+          path: state/
+          key: state-${{ runner.os }}-${{ github.ref_name }}-${{ github.run_id }}
+          restore-keys: |
+            state-${{ runner.os }}-${{ github.ref_name }}-
           
       - name: execute py script # run main.py
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python main.py
-          
-      - name: commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
-          
-      - name: push changes
-        uses: ad-m/github-push-action@master
+
+      - name: save state cache
+        if: success()
+        uses: actions/cache/save@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main 
+          path: state/
+          key: state-${{ runner.os }}-${{ github.ref_name }}-${{ github.run_id }}
+
+      - name: upload logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs-${{ github.run_id }}
+          path: logs/
+          if-no-files-found: ignore
