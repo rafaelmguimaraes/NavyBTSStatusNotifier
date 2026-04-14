@@ -20,10 +20,10 @@ jobs:
     steps:
 
       - name: checkout repo content
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: setup python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
           
@@ -33,7 +33,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: restore saved state
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v5
         with:
           path: state/
           key: state-${{ runner.os }}-${{ github.ref_name }}-${{ github.run_id }}
@@ -48,14 +48,14 @@ jobs:
 
       - name: save state cache
         if: success()
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v5
         with:
           path: state/
           key: state-${{ runner.os }}-${{ github.ref_name }}-${{ github.run_id }}
 
       - name: upload logs on failure
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: logs-${{ github.run_id }}
           path: logs/
